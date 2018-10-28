@@ -1,0 +1,47 @@
+<head>
+  <title>bookit</title>
+</head>
+
+<body>
+  {{> availableTimes}}
+</body>
+
+<template name="availableTimes">
+  <div>
+    <label>Select a day:</label>
+    <select id="selectedDay">
+      {{#each w in days}}
+        <option value={{formatDate w "YYYY-MM-DD"}}>{{formatDate w "dddd DD/MM/YYYY"}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <div>
+    <label>I need
+      <select id="hourCount">
+        {{#each h in hours}}
+          <option>{{h}}</option>
+        {{/each}}
+      </select>
+      hours for my booking
+    </label>
+    <button id="findTimeSlots">Find</button>
+  </div>
+
+  {{#if selectedDay}}
+    <h1>For {{selectedDay}}</h1>
+    <div class="column">
+      <h2>Existing bookings:</h2>
+      {{#each b in bookings}}
+        <div>{{b.hours}}h: {{b.from}} - {{b.to}}</div>
+      {{/each}}
+    </div>
+
+    <div class="column">
+      <h2>Times available:</h2>
+      {{#each t in timeSlots}}
+        <div><a href="" class="timeSlotSelect">{{t}}</a></div>
+      {{/each}}
+    </div>
+  {{/if}}
+</template>
