@@ -13,6 +13,4 @@ Submit results to the contact email below (pull requests will be accepted later)
 3. Download node_modules "meteor npm install"
 4. Run the app "meteor"
 
-## Contact
 
-Tom, WhatsApp +64278836830, tosinek@gmail.com
