@@ -1,11 +1,3 @@
-## Tasks
-
-1. Finish a helper days() in client/main.js:27 (not Meteor-specific)
-2. Finish a subscription "bookings" callback in client/main.js:10 (Meteor reactive variable)
-3. Finish a db insert functionality in client/main.js:60 and server/main.js:2 (Mongo and Meteor methods)
-
-Submit results to the contact email below (pull requests will be accepted later).
-
 ## Run a meteor app
 
 1. Clone the repo
